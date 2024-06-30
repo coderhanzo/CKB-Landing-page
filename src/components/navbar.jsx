@@ -1,10 +1,18 @@
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-      <h1>this is the navbar</h1>
+      <nav className="navbar">
+        <ul>
+          <li>Contact</li>
+          <Link to="/service">
+            <li>Service</li>
+          </Link>
+        </ul>
+      </nav>
     </>
   );
-}
+};
 
 export default Navbar;

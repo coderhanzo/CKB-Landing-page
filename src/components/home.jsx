@@ -1,8 +1,12 @@
-
+import VerticalSlider from "./verticalslider";
 const Home = () => {
   return (
     <>
-      <h1>this is the home</h1>
+      <a href="#">
+        <h1>this is the home</h1>
+      </a>
+
+      <VerticalSlider />
     </>
   );
 };
