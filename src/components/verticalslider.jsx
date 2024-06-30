@@ -1,11 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Pagination, Navigation } from "swiper/modules";
 
 function VerticalSlider() {
   return (
     <Swiper
       direction="vertical"
+      slidesPerView={1}
+      loop={true}
       pagination={{ clickable: true }}
+      navigation={true}
+      modules={[Pagination, Navigation]}
       className="mySwiper h-screen w-full"
     >
       <SwiperSlide>
