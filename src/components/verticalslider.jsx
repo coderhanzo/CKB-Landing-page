@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay, Mousewheel } from "swiper/modules";
 
-function VerticalSlider() {
+const VerticalSlider = () => {
   return (
     <Swiper
       direction="vertical"
@@ -10,46 +10,56 @@ function VerticalSlider() {
       loop={true}
       pagination={{ clickable: true }}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      autoplay={{ delay: 5500, disableOnInteraction: false }}
+      mousewheel={{ forceToAxis: true }}
+      modules={[Pagination, Navigation, Autoplay, Mousewheel]}
       className="mySwiper h-screen w-full"
     >
       <SwiperSlide>
         <div className="relative w-full h-full">
           <img
-            src="path-to-your-image1"
+            src="/src/assets/CBK-imgs/04.jpeg"
             alt="slide1"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
-              Miérèle Beauty
+              CBK Beauty Appointments
             </h1>
             <p className="text-lg md:text-2xl lg:text-4xl mt-4">
-              new way of service
+              Book a service
             </p>
-            <button className="mt-8 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded">
+            <a
+              href="https://www.fresha.com/a/cbk-beauty-flagship-salon-accra-agostinho-neto-road-umdarsv9"
+              className="mt-8 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded"
+              target="_blank"
+            >
               Book Now
-            </button>
+            </a>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="relative w-full h-full">
           <img
-            src="path-to-your-image2"
+            src="/src/assets/CBK-imgs/01.jpeg"
             alt="slide2"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
-              Miérèle Beauty
+              CBK Beauty Store
             </h1>
             <p className="text-lg md:text-2xl lg:text-4xl mt-4">
-              new way of service
+              Browse Our Store
             </p>
-            <button className="mt-8 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded">
-              Book Now
-            </button>
+            <a
+              href="https://www.coloursbyk.com/"
+              target="_blank"
+              className="mt-8 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded"
+            >
+              Shop Now
+            </a>
           </div>
         </div>
       </SwiperSlide>
