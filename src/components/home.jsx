@@ -1,11 +1,15 @@
-import Navbar from "./navbar";
-import VerticalSlider from "./verticalslider";
+// import Navbar from "./navbar";
+// import VerticalSlider from "./verticalslider";
+import Carousel from "./service";
+// import LoadingScreen from "./loadingscreen";
 const Home = () => {
   return (
     <>
-      <div className="max">
-        <Navbar />
-        <VerticalSlider />
+      <div>
+        {/* <Navbar /> */}
+        {/* <LoadingScreen /> */}
+        <Carousel />
+        {/* <VerticalSlider /> */}
       </div>
     </>
   );
