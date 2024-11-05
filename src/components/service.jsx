@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
+import "./service.css";
 
 const Carousel = () => {
   const images = [
-    // "https://mdbcdn.b-cdn.net/img/new/slides/041.webp",
-    // "https://mdbcdn.b-cdn.net/img/new/slides/042.webp",
-    // "https://mdbcdn.b-cdn.net/img/new/slides/043.webp",
     "/src/assets/CBK-imgs/01.jpeg",
     "/src/assets/CBK-imgs/02.jpeg",
     "/src/assets/CBK-imgs/03.jpeg",
@@ -21,18 +19,15 @@ const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    // Set an interval to automatically change the active image every 3 seconds
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
-
-    // Clean up the interval when the component unmounts
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <div id="carouselExampleSlidesOnly" className="relative w-full h-screen">
-      <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
+      <div id="carouselExampleSlidesOnly" className="relative w-full h-screen">
         {images.map((image, index) => (
           <div
             key={index}
@@ -48,6 +43,15 @@ const Carousel = () => {
             />
           </div>
         ))}
+      </div>
+
+      {/* Static Centered Overlay with Blur Effect */}
+      <div className="centered-popup-container z-20">
+        <h2 className="message">Welcome to Our Service</h2>
+        <div className="buttons-container">
+          <button className="action-button">Shop</button>
+          <button className="action-button">Book Services</button>
+        </div>
       </div>
     </div>
   );
