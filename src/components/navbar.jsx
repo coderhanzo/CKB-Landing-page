@@ -1,31 +1,31 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./navbar.css";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
-    <nav className="flex justify-center items-center w-full fixed top-0 z-30 bg-transparent shadow-none py-4">
-      <div className="flex items-center justify-between w-full max-w-5xl px-4">
+    <nav className="flex justify-center items-center fixed top-0 z-30 bg-transparent shadow-none py-4">
+      <div className="flex items-center justify-between max-w-5xl px-4 sm:px-4">
         {" "}
         {/* Centered container */}
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center logo-cbk-cont">
           <Link to="/" className="text-2xl font-bold text-blue-600">
             <img
-              src="/path/to/logo.png"
+              src="src/assets/CBK-imgs/cbklogo.png"
               alt="Logo"
-              className="h-8 w-8 mr-2 inline"
+              className="mr-2 inline logo-cbk"
             />
-            YourBrand
           </Link>
         </div>
         {/* Mobile Menu Icon */}
-        <div className="lg:hidden">
+        {/* <div className="lg:hidden">
           <button
             onClick={toggleMenu}
             className="text-gray-500 focus:outline-none"
@@ -64,10 +64,10 @@ const Navbar = () => {
               </svg>
             )}
           </button>
-        </div>
+        </div> */}
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-8">
-          {/* <Link to="/about" className="text-gray-800 hover:text-blue-600">
+        {/* <div className="hidden lg:flex items-center space-x-8">
+          <Link to="/about" className="text-gray-800 hover:text-blue-600">
             About
           </Link>
           <Link to="/services" className="text-gray-800 hover:text-blue-600">
@@ -75,17 +75,18 @@ const Navbar = () => {
           </Link>
           <Link to="/portfolio" className="text-gray-800 hover:text-blue-600">
             Portfolio
-          </Link> */}
+          </Link>
           <Link to="/contact">
             <button className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
               Contact
             </button>
           </Link>
-        </div>
+        </div> */}
         {/* Mobile Dropdown Menu */}
-        {isOpen && (
+        {/* {isOpen && (
+          
           <div className="absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center space-y-8 lg:hidden">
-            {/* Close Button inside Dropdown */}
+          
             <button
               onClick={toggleMenu}
               className="text-gray-500 absolute top-4 right-4 focus:outline-none"
@@ -105,7 +106,7 @@ const Navbar = () => {
                 ></path>
               </svg>
             </button>
-            {/* <Link
+            <Link
               to="/about"
               className="text-gray-800 hover:text-blue-600 text-2xl"
               onClick={toggleMenu}
@@ -125,14 +126,14 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Portfolio
-            </Link> */}
+            </Link>
             <Link to="/contact" onClick={toggleMenu}>
               <button className="bg-blue-600 text-white font-bold py-2 px-6 rounded hover:bg-blue-700 transition duration-200">
                 Contact
               </button>
             </Link>
           </div>
-        )}
+        )} */}
       </div>
     </nav>
   );

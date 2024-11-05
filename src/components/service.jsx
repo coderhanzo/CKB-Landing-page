@@ -47,10 +47,22 @@ const Carousel = () => {
 
       {/* Static Centered Overlay with Blur Effect */}
       <div className="centered-popup-container z-20">
-        <h2 className="message">Welcome to Our Service</h2>
+        <h2 className="message">Welcome to CBK's Beauty Main Page</h2>
         <div className="buttons-container">
-          <button className="action-button">Shop</button>
-          <button className="action-button">Book Services</button>
+          <a
+            href="https://www.coloursbyk.com/"
+            target="_blank"
+            className="mt-8 px-4 py-2 bg-slate-800 hover:bg-red-700 text-white font-semibold rounded action-button"
+          >
+            Shop Now
+          </a>
+          <a
+            href="https://www.fresha.com/a/cbk-beauty-flagship-salon-accra-agostinho-neto-road-umdarsv9"
+            target="_blank"
+            className="mt-8 px-4 py-2 bg-slate-800 hover:bg-red-700 text-white font-semibold rounded action-button"
+          >
+            Book an Appointment
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,19 @@
+.logo-cbk-cont {
+  /* background-color: rgba(0, 0, 0, 0.2); Semi-transparent background */
+  padding: 5px; /* Space around the image */
+  border-radius: 8px; /* Rounded corners */
+  display: inline-block;
+}
+
+.logo-cbk {
+  width: auto;
+  max-height: 100px; /* Adjust as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Adjust the image size further for mobile screens */
+@media (max-width: 600px) {
+  .logo-cbk {
+    max-width: 100px; /* Smaller size for mobile */
+  }
+}

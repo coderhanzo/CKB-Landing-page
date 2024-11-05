@@ -4,21 +4,34 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* Adjust width as needed */
+  width: 300%;
   max-width: 500px;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  max-height: 500px;
+  background: rgba(255, 255, 255, 0.124); /* Semi-transparent background */
   padding: 20px;
   border-radius: 10px;
   backdrop-filter: blur(10px); /* Blur effect */
   text-align: center;
   color: #fff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.118);
 }
+
+@media (max-width: 600px) { /* Apply this on small screens */
+  .centered-popup-container {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Adjust padding */
+    background: rgba(255, 255, 255, 0.2); /* Adjust background transparency */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Slightly lighter shadow */
+  }
+}
+
 
 /* Message Text */
 .message {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 15px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.723);
 }
 
 /* Buttons Container */
